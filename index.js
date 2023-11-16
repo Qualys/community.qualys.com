@@ -7,21 +7,15 @@
 
 	elements = document.querySelectorAll(".q-navigation__item > a");
 	if (elements) {
-
 		length = elements.length;
 		for (index = 0; index < length; index += 1) {
-
 			element = elements[index];
 			linkHref = element.getAttribute("href");
 			windowHref = window.location.href;
 			if (windowHref.match(linkHref)) {
-
 				element.classList.add("active");
-
 			}
-
 		}
-
 	}
 
 })();
@@ -36,7 +30,6 @@
 	function handleMenuClick (event) {
 
 		var container, menu, menuIcon;
-
 		menuIcon = event.currentTarget;
 		menu = document.querySelector(".q-hamburger-menu__container");
 		container = document.querySelector(".q-header__background");
@@ -205,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	} else {
 
-		searchPageURI = "https://community.qualys.com/search/";
+		searchPageURI = "https://success.qualys.com/support/s/global-search/%40uri";
 		options = {
 			"Omnibox": {
 				"placeholder": "Search"
@@ -337,6 +330,3 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 }());
-
-
-
