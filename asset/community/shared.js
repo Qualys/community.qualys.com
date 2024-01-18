@@ -1,0 +1,9 @@
+"use strict";/*
+ * add "active" className to primary nav elements on matching URLs
+ */ /*
+ * handle taps in mobile hamburger menu
+ */(function(){var a,b,c,d,e,f;if(a=document.querySelectorAll(".q-navigation__item > a"),a)for(d=a.length,c=0;c<d;c+=1)b=a[c],e=b.getAttribute("href"),f=window.location.href,f.match(e)&&b.classList.add("active")})(),function(){"use strict";function a(a){var b,c,d;d=a.currentTarget,c=document.querySelector(".q-hamburger-menu__container"),b=document.querySelector(".q-header__background"),d.classList.toggle("active")?(c.classList.add("active"),b.classList.add("active")):(c.classList.remove("active"),b.classList.remove("active"))}function b(a){a.preventDefault();var b,c,d;return d=a.currentTarget,c=document.querySelector(".q-header__nav-sub"),b=document.querySelector(".q-header__nav"),d.classList.toggle("active")?(c.classList.add("active"),b.classList.add("active")):(c.classList.remove("active"),b.classList.remove("active")),!1}/*
+	 * listen for clicks on the "Back to main menu" link
+	 * and remove the active classes form the parent-level menu, icon, and container
+	 */function c(a){a.preventDefault();var b,c,d;return d=document.querySelector(".q-header__nav > li:first-child > a"),c=document.querySelector(".q-header__nav-sub"),b=document.querySelector(".q-header__nav"),d.classList.remove("active"),c.classList.remove("active"),b.classList.remove("active"),!1}function d(){i&&i.addEventListener("click",a),h&&h.addEventListener("click",b),g&&g.addEventListener("click",c)}function e(){i&&i.removeEventListener("click",a),h&&h.removeEventListener("click",b),g&&g.removeEventListener("click",c)}function f(a){a.matches?d():e()}var g,h,i,j;i=document.querySelector(".q-hamburger-menu__icon"),h=document.querySelector(".q-header__nav > li:nth-child(2) > a"),g=document.querySelector("a.q-header__nav-back"),j=window.matchMedia("(max-width: 40em)"),j.addListener(f),f(j)}();
+//# sourceMappingURL=shared.js.map
