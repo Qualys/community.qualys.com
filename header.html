@@ -1,9 +1,9 @@
 <div class="q-header__background">
-	<header class="q-header site-header" id="masthead">
+	<header class="q-header">
 		<div class="q-header__container">
 			<div class="q-hamberger-menu">
 				<div class="q-hamburger-menu__icon">
-					<svg width="23" height="23" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg">
+					<svg width="23" height="23" viewbox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg">
 						<g fill="currentColor">
 							<rect id="Rectangle1" x="0" y="5" width="23" height="3" rx="1.5"></rect>
 							<rect id="Rectangle2" x="0" y="10" width="23" height="3" rx="1.5"></rect>
@@ -12,47 +12,171 @@
 					</svg>
 				</div>
 				<div class="q-hamburger-menu__container">
-					<ul id="primary-menu" class="q-header__nav"><li id="menu-item-26462" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-26462 q-navigation__item"><a href="https://success.qualys.com/discussions/s/">Discussions</a>
-<ul class="sub-menu q-header__nav-sub">
-	<li id="menu-item-26463" class="q-header__nav-back menu-item menu-item-type-custom menu-item-object-custom menu-item-26463 q-navigation__item"><a href="#back">Back to main menu</a></li>
-	<li id="menu-item-26464" class="q-browser-by-topic menu-item menu-item-type-custom menu-item-object-custom menu-item-26464 q-navigation__item"><a href="https://qualys-secure.force.com/discussions/s/">BROWSE BY TOPIC</a><span class="menu-item-description">BROWSE BY TOPIC</span></li>
-	<li id="menu-item-26465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26465 q-navigation__item"><a href="https://qualys-secure.force.com/discussions/s/topic/0TO2L000000HIRIWA4/asset-management">Global IT Asset Management</a></li>
-	<li id="menu-item-26466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26466 q-navigation__item"><a href="https://qualys-secure.force.com/discussions/s/topic/0TO2L000000HIRwWAO/it-security">IT Security</a></li>
-	<li id="menu-item-26467" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26467 q-navigation__item"><a href="https://qualys-secure.force.com/discussions/s/topic/0TO2L000000HIS1WAO/compliance">Compliance</a></li>
-	<li id="menu-item-26468" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26468 q-navigation__item"><a href="https://qualys-secure.force.com/discussions/s/topic/0TO2L000000HIRnWAO/cloud-container">Cloud &amp; Container Security</a></li>
-	<li id="menu-item-26469" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26469 q-navigation__item"><a href="https://qualys-secure.force.com/discussions/s/topic/0TO2L000000HISCWA4/web-app-security">Web App Security</a></li>
-	<li id="menu-item-26470" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26470 q-navigation__item"><a href="https://qualys-secure.force.com/discussions/s/topic/0TO2L000000HIRfWAO/certificate-security">Certificate Security &amp; SSL Labs</a></li>
-	<li id="menu-item-26471" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26471 q-navigation__item"><a href="https://qualys-secure.force.com/discussions/s/topic/0TO2L000000HIR8WAO/developer">Developer API</a></li>
-	<li id="menu-item-26562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26562 q-navigation__item"><a href="https://qualys-secure.force.com/discussions/s/topic/0TO2L000000HIRAWA4/qualys-cloud-platform">Cloud Platform</a></li>
-	<li id="menu-item-26472" class="q-button__start-a-discussion q-button__light-blue q-button-with-arrow menu-item menu-item-type-custom menu-item-object-custom menu-item-26472 q-navigation__item"><a href="https://qualys-secure.force.com/discussions/s/#start-a-discussion"><span>Start a discussion</span></a></li>
-</ul>
-</li>
-<li id="menu-item-26473" class="q-header_blog-link menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-26473 q-navigation__item"><a href="https://blog.qualys.com/" aria-current="page" class="active">Blog</a></li>
-<li id="menu-item-26474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26474 q-navigation__item"><a href="https://www.qualys.com/training/">Training</a></li>
-<li id="menu-item-26475" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26475 q-navigation__item"><a href="https://www.qualys.com/documentation/">Docs</a></li>
-<li id="menu-item-26476" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26476 q-navigation__item"><a href="https://success.qualys.com/customersupport/">Support</a></li>
-<li class="q-header__nav-underline"></li></ul>				</div>
+					<ul class="q-header__nav">
+						<li class="q-navigation__item q-navigation__mobile-only">
+							<a href="https://success.qualys.com/discussions/s/"
+							   title="Qualys Discussions">
+								Discussions
+							</a>
+						</li>
+						<li class="q-navigation__item">
+							<a href="https://success.qualys.com/discussions/s/"
+							   title="Qualys Discussions">
+								Discussions<span class="q-navigation__mobile-only"> by Topic…</span>
+							</a>
+							<ul class="q-header__nav-sub">
+								<li>
+									<a href="#back" class="q-header__nav-back">Back to main menu</a>
+								</li>
+								<li class="q-browser-by-topic">
+									<span>Browse by Topic</span>
+								</li>
+								<li>
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRIWA4/asset-management"
+									   class="q-nav__link"
+									   title="Asset Management Discussions">
+										Asset Management</a>
+								</li>
+								<li>
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRwWAO/it-security"
+									   class="q-nav__link"
+									   title="IT Security Discussions">
+										IT Security</a>
+								</li>
+								<li>
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIS1WAO/compliance"
+									   class="q-nav__link"
+									   title="Compliance Discussions">
+										Compliance</a>
+								</li>
+								<li>
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRnWAO/cloud-container"
+									   class="q-nav__link"
+									   title="Cloud &amp; Container Security Discussions">
+										Cloud &amp; Container Security</a>
+								</li>
+								<li>
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HISCWA4/web-app-security"
+									   class="q-nav__link"
+									   title="Web App Security Discussions">
+										Web App Security</a>
+								</li>
+								<li>
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRfWAO/certificate-security"
+									   class="q-nav__link"
+									   title="SSL Labs &amp; Certificate Security Discussions">
+										Certificate Security &amp; SSL Labs</a>
+								</li>
+								<li>
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIR8WAO/developer"
+									   class="q-nav__link"
+									   title="Qualys Developer API Discussions">
+										Developer API</a>
+								</li>
+								<li class="q-navigation__desktop-only">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIRAWA4/qualys-cloud-platform"
+									   class="q-nav__link"
+									   title="Qualys Cloud Platform Discussions">
+										Cloud Platform</a>
+								</li>
+								<li class="q-navigation__desktop-only">
+									<a href="https://success.qualys.com/discussions/s/topic/0TO2L000000HIYEWA4/consulting-edition"
+									   class="q-nav__link"
+									   title="Qualys Consulting Edition Discussions">
+										Consulting Edition</a>
+								</li>
+								<li>
+									<a href="https://success.qualys.com/discussions/s/#start-a-discussion"
+									   class="q-button__start-a-discussion q-button__light-blue q-button-with-arrow">
+										<span>Start a discussion</span></a>
+								</li>
+							</ul>
+						</li>
+						<li class="q-navigation__item">
+							<a href="https://blog.qualys.com/"
+							   title="Qualys Blog">Blog</a>
+						</li>
+						<li class="q-navigation__item">
+							<a href="https://www.qualys.com/training/"
+							   title="Qualys Training &amp; Certification">Training</a>
+						</li>
+						<li class="q-navigation__item">
+							<a href="https://www.qualys.com/documentation/"
+							   title="Qualys Documentation">Docs</a>
+						</li>
+						<li class="q-navigation__item">
+							<a href="https://success.qualys.com/support/s/"
+							   title="Qualys Support">Support</a>
+						</li>
+						<!-- li class="q-navigation__item q-navigation__mobile-only">
+							<a href="https://www.qualys.com/"
+							   title="Qualys.com">Qualys.com</a>
+						</li -->
+						<li class="q-header__nav-underline"></li>
+					</ul>
+				</div>
 			</div>
 			<a class="q-header__logo q-header__logo-community" href="https://community.qualys.com/" title="Qualys Community">
-					<span class="q-logo-shield">
-						<img src="https://ik.imagekit.io/qualys/image/logo/qualys.svg" width="111" height="35" alt="Qualys" class="q-logo__horizontal">
-					</span>
-					<span class="q-logo-text">Community</span>
-				</a>
+				<span class="q-logo-shield">
+					<img src="https://d1uyme8f6ss6qi.cloudfront.net/image/logo/qualys.svg" width="111" height="35" alt="Qualys" class="q-logo__horizontal">
+				</span>
+				<span class="q-logo-text">Community</span>
+			</a>
 			<div class="q-user-menu">
 				<div class="q-user-menu__icon hidden">
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="23">
 						<g fill="currentColor">
 							<g transform="translate(3 -.093)">
-								<path d="M6.284.092a5.709 5.709 0 1 1-.002 11.418A5.709 5.709 0 0 1 6.284.092"></path>
+								<path d="M6.284.092a5.709 5.709 0 1 1-.002 11.418A5.709 5.709 0 0 1 6.284.092"/>
 							</g>
 							<g transform="translate(0 11.907)">
-								<path d="M.187 7.575C-.476 9.195.703 11 2.47 11h13.922c1.767 0 2.946-1.804 2.283-3.425C16.945 3.45 13.445.65 9.431.65c-4.015 0-7.55 2.8-9.244 6.925"></path>
+								<path d="M.187 7.575C-.476 9.195.703 11 2.47 11h13.922c1.767 0 2.946-1.804 2.283-3.425C16.945 3.45 13.445.65 9.431.65c-4.015 0-7.55 2.8-9.244 6.925"/>
 							</g>
 						</g>
 					</svg>
 				</div>
+				<div class="q-user-menu__container hidden">
+					<div class="q-user-menu__not-logged-in">
+						<ul>
+							<li class="q-navigation__item">
+								<a href="https://success.qualys.com/discussions/s/login/"
+								   title="Qualys Community Login">
+									Login</a>
+							</li>
+							<li class="q-navigation__item">
+								<a href="https://success.qualys.com/discussions/s/login/SelfRegister"
+								   title="Qualys Community Registration">
+									Register</a>
+							</li>
+							<li class="q-header__nav-underline"></li>
+						</ul>
+					</div>
+					<div class="q-user-menu__logged-in"></div>
+				</div>
 			</div>
 		</div>
-	</header><!-- #masthead -->
+	</header>
 </div>
+<script>
+	/*
+	 * trigger an event when loaded so Salesforce knows when the header has loaded
+	 */
+	(function () {
+
+		var event;
+
+		if (window.CustomEvent) {
+
+			event = new CustomEvent("QualysHeaderLoaded");
+
+		} else {
+
+			event = document.createEvent("CustomEvent");
+			event.initCustomEvent("QualysHeaderLoaded", true, true);
+
+		}
+
+		document.dispatchEvent(event);
+
+	})();
+</script>

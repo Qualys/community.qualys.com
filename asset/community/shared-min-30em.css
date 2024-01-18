@@ -1,7 +1,7 @@
 /*
  * @media screen and (min-width: 30em)
  */
-@media screen and (min-width: 30em) {
+ @media screen and (min-width: 30em) {
 	h2 {
 		font-size: 2.5em;
 	}
@@ -61,15 +61,13 @@
 		margin-left: 0;
 	}
 	.q-footer__column--nav {
-		-moz-column-count: 2;
-		     column-count: 2;
+		column-count: 2;
 		display: block;
 		margin: 3rem -15px 0;
 		visibility: visible;
 	}
 	.q-footer__group {
-		-moz-column-break-inside: avoid;
-		     break-inside: avoid-column;
+		break-inside: avoid-column;
 		margin: 0 15px;
 	}
 	.q-footer__column--nav .q-footer__subheading {
@@ -229,5 +227,3 @@
 		color: white;
 	}
 }
-
-/*# sourceMappingURL=shared-min-30em.css.map */

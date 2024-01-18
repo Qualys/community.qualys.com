@@ -635,18 +635,6 @@ a:visited.q-button__start-a-discussion {
 	font-weight: 400;
 	letter-spacing: -0.12px;
 }
-.q-search .magic-box .magic-box-input > input::-moz-placeholder {
-	color: #6A778B;
-	opacity: 1;
-}
-.q-search .magic-box .magic-box-input > input:-ms-input-placeholder {
-	color: #6A778B;
-	opacity: 1;
-}
-.q-search .magic-box .magic-box-input > input::-ms-input-placeholder {
-	color: #6A778B;
-	opacity: 1;
-}
 .q-search .magic-box .magic-box-input .magic-box-underlay,
 .q-search .magic-box .magic-box-input > input::placeholder {
 	color: #6A778B;
@@ -882,5 +870,3 @@ a:visited.q-button__start-a-discussion {
 .comm-page-home .body .siteforceContentArea .comm-layout-column .ui-widget:not(:last-child) {
 	margin-bottom: 2rem;
 }
-
-/*# sourceMappingURL=shared.css.map */
