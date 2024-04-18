@@ -150,86 +150,67 @@
 
 })();
 
+
 /* global Coveo */
-
 document.addEventListener("DOMContentLoaded", function () {
+	fetch("https://hyppimpgupvx2ofcrsn2yxsg2i0dcmgs.lambda-url.us-east-1.on.aws/")
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch API key");
+            }
+            return response.json();
+        })
+        .then(responseData => {
+			const PUBLIC_API_KEY = responseData;
 
-	var PUBLIC_API_KEY, options, search, searchbox, searchPageURI, site;
+			const searchbox = document.querySelector("#searchbox");
+            const search = document.querySelector("#search");
 
-	site = document.querySelector("#site_data");
-	try {
-		site = JSON.parse(site.innerText);
-	} catch (err) {
-		/* eslint-disable no-console */
-		console.warn(err);
-		/* eslint-enable no-console */
-		site = {};
-	}
+            Coveo.SearchEndpoint.configureCloudV2Endpoint(
+                "",
+                PUBLIC_API_KEY,
+                "https://platform.cloud.coveo.com/rest/search",
+                {
+                    queryStringArguments: {
+                        searchHub: "CommunitySearch",
+                    },
+                }
+            );
 
-	if (site.coveo && site.coveo.public && site.coveo.public.api) {
-		PUBLIC_API_KEY = site.coveo.public.api.key;
-	} else {
-		throw new Error("Public API Key for Coveo not found.");
-	}
-	searchbox = document.querySelector("#searchbox");
-	search = document.querySelector("#search");
+			if (search) {
+                search.addEventListener("newResultDisplayed", hideShowMoreLink);
+                Coveo.init(search, {
+                    externalComponents: [searchbox],
+                });
+            } else {
+                let searchPageURI = "https://success.qualys.com/support/s/global-search/%40uri";
+                let options = {
+                    Omnibox: {
+                        placeholder: "Search",
+                    },
+                };
 
-	Coveo.SearchEndpoint.configureCloudV2Endpoint(
-		"",
-		PUBLIC_API_KEY,
-		"https://platform.cloud.coveo.com/rest/search",
-		{
-			"queryStringArguments": {
-				"searchHub": "CommunitySearch"
-			}
-		}
-	);
+                if (location.pathname.match(/^\/vulnerability-detection-pipeline/)) {
+                    searchPageURI = "https://success.qualys.com/support/s/global-search/%40uri";
+                    options.Omnibox.placeholder = "Search Discussions, Blog Posts, Training, Docs and Support";
+                }
 
-	if (search) {
+                if (location.pathname.match(/^\/documentation/)) {
+                    searchPageURI = "https://success.qualys.com/support/s/global-search/%40uri#t=Docs";
+                    options.Omnibox.placeholder = "Search documentation";
+                }
 
-		// bind custom event callbacks before initialization
-		search.addEventListener("newResultDisplayed", hideShowMoreLink);
+                if (location.pathname.match(/^\/training/)) {
+                    searchPageURI = "https://success.qualys.com/support/s/global-search/%40uri#t=Training";
+                    options.Omnibox.placeholder = "Search training";
+                }
 
-		// add an external component to the initialization options
-		// to link the external search box to the search results
-		Coveo.init(search, {
-			"externalComponents": [searchbox]
-		});
-
-	} else {
-
-		searchPageURI = "https://success.qualys.com/support/s/global-search/%40uri";
-		options = {
-			"Omnibox": {
-				"placeholder": "Search"
-			}
-		};
-
-		if (location.pathname.match(/^\/vulnerability-detection-pipeline/)) {
-			searchPageURI = "https://community.qualys.com" + "/search/";
-			options.Omnibox.placeholder = "Search Discussions, Blog Posts, Training, Docs and Support";
-		}
-
-		if (location.pathname.match(/^\/documentation/)) {
-
-			// searching from a Docs page
-			searchPageURI = "https://community.qualys.com" + "/search/#t=Docs";
-			options.Omnibox.placeholder = "Search documentation";
-
-		}
-
-		if (location.pathname.match(/^\/training/)) {
-
-			// searching from a Training page
-			searchPageURI = "https://community.qualys.com" + "/search/#t=Training";
-			options.Omnibox.placeholder = "Search training";
-
-		}
-
-		// call initSearchBox to setup the standalone search box
-		Coveo.initSearchbox(searchbox, searchPageURI, options);
-
-	}
+                Coveo.initSearchbox(searchbox, searchPageURI, options);
+            }
+		}).catch(error => {
+            console.error(error);
+            // Handle error
+        });
 
 
 	// helper function to hide "Show more" links when there are no more results to show
