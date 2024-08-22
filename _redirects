@@ -17,5 +17,6 @@
 /servlet/*  /  301
 /discussion/*  /  301
 /people/*  /  301
+/qwebhelp/*  /  301
 /reporting/  /  301
 /api/  /  301
